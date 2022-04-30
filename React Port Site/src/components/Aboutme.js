@@ -7,11 +7,10 @@ export default function AboutMe() {
             
             <div className="about-me-container" id="about-me-container">
 
-                <img className="handsome-dude" src="assets\IMG_9882.jpg"/>
+                <img className="handsome-dude" alt="one handsome fella" src="assets\handsomeDude.webp"/>
 
                 <div className="about-me-contents" >
                     <h2 className="about-me-title">Nice to meet you! </h2>
-                    <hr className="line2" />
                     <p className="about-me">The basic equations of the unified theory correctly
                     describe the electroweak force and its associated
                     force-carrying particles, namely the photon, and the W

@@ -39,12 +39,12 @@ export default function Contact() {
                 <div className="contact-info-container">
 
                     <form ref={form} onSubmit={sendEmail}>
-                        <label>Name</label>
-                        <input type="text" name="name" />
-                        <label>Email</label>
-                        <input type="email" name="email" />
-                        <label>Message</label>
-                        <textarea name="message" />
+                        <label htmlFor="name">Name</label>
+                        <input type="text" name="name" id="name" />
+                        <label htmlFor="email">Email</label>
+                        <input type="email" name="email" id="email" />
+                        <label htmlFor="message">Message</label>
+                        <textarea name="message" id="message" />
                         <input type="submit" value="Send" className="contact-send-button" />
                     </form>
 
@@ -54,10 +54,10 @@ export default function Contact() {
 
                         <div className="social-media-icon-container" data-aos="fade-right" >
 
-                            <a href="https://twitter.com/stephenUltor" target="_blank" className="twitter-icon-link"><FontAwesomeIcon icon={faKiwiBird} className="icons twitter" /></a>
-                            <a href="https://www.linkedin.com/in/stephen-morrow-73b6b7169/" target="_blank" className="linkedin-icon-link"><FontAwesomeIcon icon={faLinkedin} className="icons linkedin" /></a>
-                            <a href="https://www.facebook.com/stephen.morrow.12382" target="_blank" className="facebook-icon-link"><FontAwesomeIcon icon={faFacebook} className="icons facebook" /></a>
-                            <a href="https://codepen.io/stephenleemorrow" target="_blank" className="codepen-icon-link"><FontAwesomeIcon icon={faCodepen} className="icons codepen" /></a>
+                            <a href="https://twitter.com/stephenUltor" title="link to my twitter" target="_blank" className="twitter-icon-link"><FontAwesomeIcon icon={faKiwiBird} className="icons twitter" /></a>
+                            <a href="https://www.linkedin.com/in/stephen-morrow-73b6b7169/" title="link to my linkedIn" target="_blank" className="linkedin-icon-link"><FontAwesomeIcon icon={faLinkedin} className="icons linkedin" /></a>
+                            <a href="https://www.facebook.com/stephen.morrow.12382" title="link to my facebook" target="_blank" className="facebook-icon-link"><FontAwesomeIcon icon={faFacebook} className="icons facebook" /></a>
+                            <a href="https://codepen.io/stephenleemorrow" title="link to my codepen" target="_blank" className="codepen-icon-link"><FontAwesomeIcon icon={faCodepen} className="icons codepen" /></a>
 
 
                         </div>

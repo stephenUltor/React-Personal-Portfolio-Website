@@ -8,18 +8,18 @@ export default function sketch(p) {
   p.updateWithProps = props => {
     
     if(props.darkMode){
-      bg = p.loadImage("assets/sebastian-coria-1-1.jpg");
-      img = p.loadImage("assets/boids-window-frame-night.png");
+      bg = p.loadImage("dark-assets/pixel-dark-landscape.webp");
+      img = p.loadImage("dark-assets/boids-window-frame-night.webp");
     }else{
-      bg = p.loadImage("assets/pixle-cloud-landscape.jpg");
-      img = p.loadImage("assets/boids-window-frame.png");
+      bg = p.loadImage("assets/pixle-cloud-landscape.webp");
+      img = p.loadImage("assets/boids-window-frame.webp");
     }
   }
 
   p.setup = () => {
 
     if(p.windowWidth < 900){
-      p.createCanvas(p.windowWidth, p.windowHeight / 2);
+      p.createCanvas(p.windowWidth -80, (p.windowHeight / 2)+150);
     }else{
       p.createCanvas(p.windowWidth / 2, p.windowHeight / 2);
     }
@@ -43,7 +43,7 @@ export default function sketch(p) {
 
   p.windowResized = () => {
     if(p.windowWidth < 900){
-      p.createCanvas(p.windowWidth, p.windowHeight /2);
+      p.createCanvas(p.windowWidth -80, (p.windowHeight / 2)+150);
     }else{
       p.createCanvas(p.windowWidth / 2, p.windowHeight / 2);
     }

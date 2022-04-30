@@ -19,6 +19,7 @@
   --form-text: #CA6702;
   --social-title: #CA6702;
   --footer-text: #fec89a;
+  --mode-button: rgb(0 0 0 / 0.7);
 }
 
 [data-theme="dark"] {
@@ -36,6 +37,7 @@
   --form-text: #6EACDEff;
   --social-title: #6EACDEff;
   --footer-text: #6EACDEff;
+  --mode-button: #4E566Bff;
 }
 
 *{
@@ -51,7 +53,7 @@ html{
 body{
   background-color: var(--backcolor);
   display: inline-block;
-  overflow-x: hidden;
+  overflow: hidden;
 }
 
 .mode-button{
@@ -59,6 +61,10 @@ body{
   width: 30px;
   height: 30px;
   cursor: pointer;
+  background-color: var(--mode-button);
+  border-radius: 50%;
+  padding: 2px;
+  box-shadow: 0 3px 10px rgb(0 0 0 / 0.4);
 }
 
 /*Navbar*/
@@ -78,7 +84,7 @@ nav{
   padding: 20px;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 900px) {
   nav {
     display: none;
   }
@@ -102,7 +108,7 @@ nav{
   cursor: pointer;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 900px) {
   .snail-menu-icon {
     display: block;
   }
@@ -271,7 +277,7 @@ a.projects-icon-link:hover ~ .nav-break-line-projects{
 
 @media (max-width: 900px) {
   .intro-description {
-    margin: 0;
+    margin: 3vh 0;
   }
 }
 
@@ -290,9 +296,10 @@ a.projects-icon-link:hover ~ .nav-break-line-projects{
 
 .about-me-container{
   margin-left: auto;
-  width: 90%;
+  width: 88%;
   min-width: 320px;
-  height: 40vh;
+  height: 30vh;
+  padding: 3%;
   background-color: var(--about-me-container-background);
   border-top: 3px solid var(--about-me-contianer-border);
   border-top-left-radius: 50px;
@@ -303,7 +310,7 @@ a.projects-icon-link:hover ~ .nav-break-line-projects{
   box-shadow: 0 3px 10px rgb(0 0 0 / 0.4);
 }
 
-@media (max-width: 600px) {
+@media (max-width: 900px) {
   .about-me-container {
     border-radius: 0;
     border-bottom: none;
@@ -312,9 +319,16 @@ a.projects-icon-link:hover ~ .nav-break-line-projects{
   }
 }
 
+@media (max-height: 500px) {
+  .about-me-container {
+    height: auto;
+  }
+}
+
 .handsome-dude{
   width: 20%;
   min-width: 300px;
+  min-height: 450px;
   height: 50vh;
   border-radius: 50%;
   box-shadow: 0 3px 10px rgb(0 0 0 / 0.4);
@@ -338,32 +352,22 @@ a.projects-icon-link:hover ~ .nav-break-line-projects{
   color: var(--about-me-contents);
 }
 
-@media (max-width: 900px) {
+@media (max-width: 1300px) {
   .about-me-contents {
-    width: 100%;
+    width: 90%;
   }
 }
 
 .about-me-title{
-  margin-top: 2vh;
   margin-bottom: 20px;
-  font-size: clamp(2rem, 5vw, 4rem);
+  font-size: clamp(1.7rem, 4.5vw, 4rem);
   font-weight: 100;
   font-family: 'Roboto Slab', serif;
 }
 
-.line2{
-  width: 70%;
-  height: 1px;
-  background-color: black;
-  border: none;
-  margin: 10px
-}
-
 .about-me{
   font-family: 'Roboto Slab', serif;
-  margin: 20px;
-  font-size: clamp(1rem, 1.1vw, 2rem);
+  font-size: clamp(0.9rem, 1.1vw, 2rem);
 }
 
 /*Projects*/
@@ -448,9 +452,11 @@ a.projects-icon-link:hover ~ .nav-break-line-projects{
   margin-top: 5vh;
   width: 40vh;
   height: 40vh;
-  background-image: url("localAssets/quizzcover.jpg");
+  min-width: 250px;
+  min-height: 250px;
+  background-image: url("localAssets/quizzcover.webp");
   background-position: center;
-  background-size: 90%;
+  background-size: 89%;
   background-repeat: no-repeat;
   display: flex;
   flex-direction: column;
@@ -467,7 +473,9 @@ a.projects-icon-link:hover ~ .nav-break-line-projects{
   margin-top: 9vh;
   width: 50vh;
   height: 40vh;
-  background-image: url("localAssets/boids-window-capture.jpg");
+  min-width: 350px;
+  min-height: 250px;
+  background-image: url("localAssets/boids-window-capture.webp");
   background-position: 50% 45%;
   background-size: 70% 70%;
   background-repeat: no-repeat;
@@ -480,7 +488,9 @@ a.projects-icon-link:hover ~ .nav-break-line-projects{
   margin-top: 6vh;
   width: 30vh;
   height: 35vh;
-  background-image: url("localAssets/ray-casting.jpg");
+  min-width: 250px;
+  min-height: 300px;
+  background-image: url("localAssets/ray-casting.webp");
   background-position: 50% 35%;
   background-size: 80% 70%;
   background-repeat: no-repeat;
@@ -493,9 +503,11 @@ a.projects-icon-link:hover ~ .nav-break-line-projects{
   margin-top: 19vh;
   width: 40vh;
   height: 40vh;
-  background-image: url("localAssets/book-website.jpg");
+  min-width: 250px;
+  min-height: 250px;
+  background-image: url("localAssets/book-website.webp");
   background-position: top;
-  background-size: 100% 90%;
+  background-size: 100% 89%;
   background-repeat: no-repeat;
   display: flex;
   flex-direction: column;
@@ -525,7 +537,7 @@ a.projects-icon-link:hover ~ .nav-break-line-projects{
 
 .skills-contianer{
   position: relative;
-  height: 40vh;
+  height: auto;
   width: 100%;
   background-color: var(--skills-container);
   display: flex;
@@ -546,7 +558,6 @@ a.projects-icon-link:hover ~ .nav-break-line-projects{
 }
 
 .skill-icon-container{
-  margin-top: -6vh;
   width: auto;
   height: auto;
   padding: 10px;
@@ -760,14 +771,15 @@ textarea:focus ~ input.contact-send-button{
 .footer-container{
   position: relative;
   width: 100%;
-  height: 15vh;
+  height: auto;
+  padding: 1%;
   background-color: var(--skills-container);
   box-shadow: 0px 0 10px rgba(0, 0, 0, 0.8);
   display: flex;
   justify-content: space-around;
   align-items: center;
   flex-direction: column;
-  background-image: url("localAssets/pixel-mushroom-left-face.png"), url("localAssets/pixel-mushroom-right-face.png");
+  background-image: url("localAssets/pixel-mushroom-left-face.webp"), url("localAssets/pixel-mushroom-right-face.webp");
   background-size: 2%, 2%;
   background-repeat: no-repeat;
   background-position: 30% 100%, 70% 100%;

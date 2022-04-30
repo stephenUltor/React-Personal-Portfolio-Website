@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from "react"
-import Navbar from "./navbar"
-import Intro from "./intro"
-import AboutMe from "./Aboutme"
-import Projects from "./projects"
-import Skills from "./skills"
-import MenuOverlay from "./menuoverlay"
-import Contact from "./contact"
-import Footer from "./footer"
+import Navbar from "./components/navbar"
+import Intro from "./components/intro"
+import AboutMe from "./components/Aboutme"
+import Projects from "./components/projects"
+import Skills from "./components/skills"
+import MenuOverlay from "./components/menuoverlay"
+import Contact from "./components/contact"
+import Footer from "./components/footer"
 
 
 
